@@ -1,0 +1,9 @@
+.UsersWithOutPicture-div-1{
+    background-color:rgb(47, 113, 255) ;
+    grid-area: img;
+    display: flex;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}

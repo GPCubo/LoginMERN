@@ -1,0 +1,5 @@
+.UsersWithPicture-imgProfile{
+    border-radius: 10px;
+    width: 200px;
+    object-fit: cover;
+}

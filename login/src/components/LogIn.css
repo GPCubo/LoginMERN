@@ -1,0 +1,122 @@
+.login-pre-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 600px;
+}
+.login-div{
+    width: 600px;
+    display: flex;
+    box-shadow: 5px 5px 5px #2375AD30;
+    margin: 50px;
+}
+.login-welcome-page{
+    width: 300px;
+    color: white;
+    background: url("../assets/login-bg.svg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-title{
+    font-size: 25px;
+}
+.login-p-sign{
+    margin-top: -15px;
+    opacity: 0.5;
+    font-size: 12px;
+}
+.login-pre-form{
+    width: 300px;
+    box-sizing: border-box;
+    padding: 50px 30px;
+    background-color: white;
+}
+.login-p-hello{
+    font-size: 12px;
+}
+.login-p-gm{
+    margin: -10px 0 30px 0;
+    font-weight:700 ;
+    color: rgb(47, 113, 255);
+}
+.login-p-login{
+    margin-bottom: -5px;
+    text-align: center;
+    font-size: 12px;
+}
+.login-p-login-span{
+    font-weight:700 ;
+    color:rgb(47, 113, 255) ;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form-div{
+    margin: 30px 0px 30px -15px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.login-input-1{
+    margin: 20px 0  0 -20px ;
+    border: none;
+}
+
+.login-input-1:focus-visible{
+    outline: none;
+}
+.login-input-1::placeholder{
+    opacity: 0.5;
+    font-size: 10px;
+}
+.login-label::before{
+    position: relative;
+    display: block;
+    content: "";
+    background-color: rgb(47, 113, 255);
+    height: 2px;
+    width: 185px;
+    right: 10px;
+    bottom: -45px;
+}
+.login-label-remember{
+    margin-left: -15px;
+    font-size: 12px;
+}
+.login-a-forgot{
+    font-size: 12px;
+    color: rgb(47, 113, 255);
+}
+.login-label-submit{
+    background: rgb(17,120,189);
+    background: linear-gradient(90deg, rgb(43, 113, 255) 0%, rgba(65,175,219,1) 35%, rgba(158,232,250,1) 100%);
+    padding: 10px;
+    width: 180px;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+}
+.login-p-create-ac{
+    margin-top: 10px;
+    text-decoration:underline;
+    font-size: 14px;
+    cursor: pointer;
+    color: rgb(47, 113, 255);
+}
+@media (max-width:650px){
+    .login-div{
+        width: 280px;
+        flex-direction: column;
+    }
+    .login-welcome-page,.login-pre-form{
+        width: 280px;
+    }
+}

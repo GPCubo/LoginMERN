@@ -1,0 +1,55 @@
+.SettingsUser-div-1{
+    margin: 20px;
+    display: grid;
+    grid-template-areas: "img info info"
+                          "task task task";
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.SettingsUser-div-3{
+    height: 200px;
+    grid-area: info;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+    width: calc(100vw - 340px);
+    border-radius: 10px;
+
+}
+.SettingsUser-p-1{
+    font-size: 12px;
+}
+
+.SettingsUser-h1-name{
+    margin: 0;
+}
+.SettingsUser-btn-AddImg,.SettingsUser-label-AddImg{
+    border: none;
+    background-color: rgb(47, 113, 255);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+.SettingsUser-form-addImg{
+    display: flex;
+    justify-content: center;
+}
+@media (max-width : 580px) {
+    .SettingsUser-div-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: min-content;
+    }
+    .SettingsUser-div-3{
+        width: initial;
+    }
+    .SettingsUser-div-4{
+        height: 300px;
+        width: 100%;
+        
+    }
+}
