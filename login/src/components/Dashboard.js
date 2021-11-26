@@ -18,7 +18,7 @@ function Dashboard({toggle,userInfo}) {
                         <li className="dashboard-li-1"><i className="fas fa-tachometer-alt"></i></li>
                     </ul>
                     <div className="dashboard-div-1">
-                        <img className="dashboard-img-people" alt="pf-img" src={picture && "/upload/"+picture}/>
+                        <img className="dashboard-img-people" alt="pf-img" src={picture === null ? logo : "/upload/"+picture}/>
                         <i className="fas fa-sign-out-alt dashboard-i-logout" onClick={toggle}></i>
                     </div>
                 </nav>

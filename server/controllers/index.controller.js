@@ -5,10 +5,8 @@ controller.index = async (req, res, next) => {
     res.send("hello world")
 }
 controller.updateUser = async(req,res,next) =>{
-    console.log(req.params._id)
     await users.updateOne({"_id":req.params},{$set:{"picture":`imgprofile`+ req.params._id +".jpeg"}})
     let data = await users.findOne({"_id":req.params._id})
-    console.log(data)
     res.send({data: "ok"})
 };
 
@@ -22,14 +20,19 @@ controller.addPublic = async (req,res,next) =>{
     try {
         const nameReq = req.body.name == "" ? true:false
         const data = await users.findOne({"email": req.body.email,"password": req.body.password})
-
+        console.log(data)
         if (nameReq == true && data != null) {
             const access = true
             const {name,rank,_id,picture} = data
-            console.log(data)
             res.json({name,rank,access,_id,picture})
         }else{
-            res.send({desarrollo:"Not available now.Try later"})
+            console.log(req.body.name,req.body.email,req.body.password)
+            const NewUser = new users({
+                "name": req.body.name,
+                "email": req.body.email,
+                "password": req.body.password
+            })
+            const saveNewUser = await NewUser.save()
         }
     } catch (error) {
         console.log(error)

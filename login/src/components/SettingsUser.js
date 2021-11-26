@@ -113,9 +113,10 @@ function SettingsUser({userInfo}) {
                 </form>
                 <div className="SettingsUser-div-3">
                     <h1 className="SettingsUser-h1-name">{name}</h1>
-                    <h3>{rank.charAt(0).toUpperCase() + rank.slice(1)}</h3>
+                    <h3>{rank === null ? "Usuario":rank.charAt(0).toUpperCase() + rank.slice(1)}</h3>
                     <p className="SettingsUser-p-1">
-                        Hola soy Guillermo, un Desarrollador y Ilustrador vectorial .
+                        Hola soy Guillermo, un Desarrollador y Ilustrador vectorial . Este proyecto sigue en desarrollo.
+                        Para contrataciones:  <a href="https://www.freelancer.com/u/VGuillermoP">Haga Click Aqui </a>
                     </p>
                 </div>
             </div>
