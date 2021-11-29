@@ -18,14 +18,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 //  Multer Middleware
 const storage = multer.diskStorage({
-    destination: path.join(__dirname,'../log-in/public/upload'),
+    destination: path.join(__dirname,'./build/upload'),
+    // destination: path.join(__dirname,'../log-in/public/upload'),
     filename: (req,file,cb)=>{
         cb(null, "imgprofile"+req.originalUrl.slice(13) +".jpeg")
     }
 })
 app.use(multer({
     storage,
-    dest: path.join(__dirname,'../log-in/public/upload')
+    dest: path.join(__dirname,'./build/upload')
+    // dest: path.join(__dirname,'../log-in/public/upload')
 }).single('image'))
 
 // Routes
@@ -39,7 +41,7 @@ app.use((err, req, res, next)=>{
 
 // Public
 
-app.use(express.static('./uploads'))
+app.use(express.static(path.join(__dirname,'build')))
 app.listen(app.get('port'), ()=>{
     console.log(`Server on port ${app.get("port")}`);
 });

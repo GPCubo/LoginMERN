@@ -2,7 +2,7 @@ const users = require('../models/users')
 const controller = {}
 
 controller.index = async (req, res, next) => {
-    res.send("hello world")
+    res.render()
 }
 controller.updateUser = async(req,res,next) =>{
     await users.updateOne({"_id":req.params},{$set:{"picture":`imgprofile`+ req.params._id +".jpeg"}})
