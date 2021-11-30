@@ -9,7 +9,7 @@ const multer = require('multer')
 
 
 // Settings, configuración del servidor
-app.set('port', process.env.PORT || 9000);
+const port = process.env.PORT || 9000;
 
 // Middlewares
 app.use(cors())
@@ -42,7 +42,7 @@ app.use((err, req, res, next)=>{
 
 // server static assets if in production
 if(process.env.NODE_ENV === 'production'){    
-    app.use(express.static('frontend/build'))  // set static folder 
+    app.use(express.static('build'))  // set static folder 
     //returning frontend for any route other than api 
     app.get('*',(req,res)=>{     
         res.sendFile (path.resolve(__dirname,'frontend','build',         
@@ -53,6 +53,6 @@ if(process.env.NODE_ENV === 'production'){
 // Public
 
 app.use(express.static(path.join(__dirname,'build')))
-app.listen(app.get('port'), ()=>{
-    console.log(`Server on port ${app.get("port")}`);
+app.listen(port, ()=>{
+    console.log(`Server on port ${port}`);
 });
