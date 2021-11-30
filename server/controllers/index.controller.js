@@ -1,8 +1,9 @@
 const users = require('../models/users')
 const controller = {}
+const path  = require('path')
 
 controller.index = async (req, res, next) => {
-    res.render()
+    res.sendFile(path.resolve(__dirname,'../build/index.html'))
 }
 controller.updateUser = async(req,res,next) =>{
     await users.updateOne({"_id":req.params},{$set:{"picture":`imgprofile`+ req.params._id +".jpeg"}})
