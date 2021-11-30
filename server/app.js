@@ -45,7 +45,7 @@ if(process.env.NODE_ENV === 'production'){
     app.use(express.static('build'))  // set static folder 
     //returning frontend for any route other than api 
     app.get('*',(req,res)=>{     
-        res.sendFile (path.resolve(__dirname,'frontend','build',         
+        res.sendFile (path.resolve(__dirname,'build','index.html',         
                       'index.html' ));    
     });
 }
